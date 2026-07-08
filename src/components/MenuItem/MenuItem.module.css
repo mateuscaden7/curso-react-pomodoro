@@ -1,0 +1,22 @@
+.menuitemLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    flex-direction: column;
+    background: var(--primary);
+    color: var(--text-over-primary);
+    margin-top: 3.2rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+.menuitemLink:hover {
+    filter: brightness(75%);
+    transition: all 0.3s ease-in-out;
+}
+
+.menuitemLink svg {
+    width: 3rem;
+    height: 3rem;
+}
