@@ -1,0 +1,1 @@
+export { GenericHtml } from './GenericHtml'

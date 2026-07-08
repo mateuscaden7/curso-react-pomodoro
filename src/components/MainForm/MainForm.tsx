@@ -7,7 +7,7 @@ export function MainForm() {
     return (
         <form className="form" action="">
             <div className="formRow">
-                <LabelInput topLabel="Task" placeholder="Digite algo..." id="inputTask "/>
+                <LabelInput topLabel="Task" placeholder="Digite algo..." id="inputTask"/>
             </div>
 
             <div className="formRow">

@@ -7,7 +7,7 @@ type LabelInputProps = {
 export function LabelInput({ topLabel, ...rest }: LabelInputProps) {
     return (
         <>
-            { topLabel && <label htmlFor="inputForm">{ topLabel }</label> }
+            { topLabel && <label htmlFor={{...rest}.id}>{ topLabel }</label> }
             <input className={styles.input} { ...rest } />
         </>
     )
