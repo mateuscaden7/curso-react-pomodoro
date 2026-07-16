@@ -4,8 +4,14 @@
     gap: 1.2rem;
 }
 
+.cycleText {
+    text-align: center;
+}
+
 .cyclesDots {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: .8rem;
 }
 
@@ -18,4 +24,12 @@
 
 .workTime {
     background-color: var(--warning);
+}
+
+.shortBreakTime {
+    background-color: var(--primary);
+}
+
+.longBreakTime {
+    background-color: var(--info);
 }
