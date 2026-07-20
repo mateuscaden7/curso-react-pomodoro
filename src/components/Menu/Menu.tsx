@@ -27,15 +27,15 @@ export function Menu() {
     return (
         <>
             <nav className={styles.menu}>
-                <MenuItem help="Ir para a home">
+                <MenuItem link="/" help="Ir para a home">
                     <HouseIcon />
                 </MenuItem>
 
-                <MenuItem help="Ver Histórico">
+                <MenuItem link="/history" help="Ver Histórico">
                     <HistoryIcon />
                 </MenuItem>
 
-                <MenuItem help="Configuracões">
+                <MenuItem link="/settings" help="Configuracões">
                     <SettingsIcon />
                 </MenuItem>
 

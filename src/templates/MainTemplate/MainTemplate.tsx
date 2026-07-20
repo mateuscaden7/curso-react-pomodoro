@@ -1,7 +1,5 @@
 import { Logo } from "../../components/Logo";
-import { Countdown } from "../../components/Countdown";
 import { Footer } from "../../components/Footer";
-import { MainForm } from "../../components/MainForm";
 import { Container } from "../../components/Container";
 import { Menu } from "../../components/Menu";
 

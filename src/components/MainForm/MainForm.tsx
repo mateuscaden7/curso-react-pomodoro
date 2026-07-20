@@ -8,10 +8,12 @@ import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 import { getNextCycle } from "../../utils/getNextCycle";
 import { getNextCycleType } from "../../utils/getNextCycleType";
 import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
+import { showToast } from "../../adapters/showToast";
 
 export function MainForm() {
     const taskNameInput = useRef<HTMLInputElement>(null);
     const { state, dispatch } = useTaskContext();
+    const lastTaskName = state.tasks[-1]?.name
 
     const nextCycle = getNextCycle(state.currentCycle);
     const nextCycleType = getNextCycleType(nextCycle);
@@ -30,13 +32,14 @@ export function MainForm() {
 
     function handleCreateNewTask(event: React.SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
+        showToast.dismiss();
 
         if (taskNameInput.current === null) return; 
 
         const taskName = taskNameInput.current.value.trim();
 
         if (taskName === "") {
-            alert('Digite o nome da tarefa');
+            showToast.warning('Digite o nome da tarefa');
             return;
         }
         
@@ -66,6 +69,7 @@ export function MainForm() {
                     id="inputTask"
                     ref={taskNameInput}
                     disabled={state.activeTask !== null}
+                    defaultValue={lastTaskName || ""}
                 />
             </div>
 

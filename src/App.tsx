@@ -1,13 +1,27 @@
-import { Home } from "./pages/Home";
+import { Bounce, ToastContainer } from "react-toastify";
+import { TaskContextProvider } from "./contexts/TaskContext/TaskContextProvider";
+import { MainRouter } from "./routers/MainRouter";
 import "./styles/global.css";
 import "./styles/theme.css"
-import { TaskContextProvider } from "./contexts/TaskContext/TaskContextProvider";
 
 export function App() {
     return (
         <>
             <TaskContextProvider>
-                <Home />
+                <MainRouter />
+                <ToastContainer
+                    position="top-center"
+                    autoClose={10000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick={true}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    transition={Bounce}
+                />
             </TaskContextProvider>
         </>
     );
